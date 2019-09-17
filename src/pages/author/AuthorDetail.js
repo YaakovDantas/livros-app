@@ -7,7 +7,7 @@ import { getAuthor } from './authorAction';
 class AuthorDetail extends Component {
 
     componentWillMount() {
-        this.props.getAuthor(this.props.match.params.id);
+        this.props.getAuthor(this.props.match.params.id, this.props.user);
     }
 
 
@@ -33,6 +33,7 @@ function mapStateToProps(state) {
 
     return {
         author: state.author.author,
+        user: state.user.data,
         authorBooks: state.author.authorBooks,
     }
 }

@@ -2,14 +2,14 @@ import React, { Fragment, Component } from 'react';
 import Header from '../../components/header/Header';
 import 'materialize-css/dist/css/materialize.min.css';
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { getUserToken } from '../../utils/userAction'
+// import { bindActionCreators } from 'redux'
+// import { getUserToken } from '../../utils/userAction'
 
 
 class Home extends Component {
 
     componentWillMount() {
-        this.props.getUserToken();
+        // this.props.getUserToken();
     }
 
     render() {
@@ -32,8 +32,8 @@ function mapStateToProps(state) {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ getUserToken }, dispatch)
-}
+// function mapDispatchToProps(dispatch) {
+//     return bindActionCreators({ getUserToken }, dispatch)
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps)(Home)

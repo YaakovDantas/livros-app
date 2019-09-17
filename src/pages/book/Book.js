@@ -30,7 +30,7 @@ class Book extends Component{
 function mapStateToProps(state) {
     return {
         livros: state.books.list,
-        user:state.user.data.access_token
+        user:state.user.data
     }
 }
 
